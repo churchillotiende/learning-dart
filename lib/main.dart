@@ -4,8 +4,12 @@ void main() {
   runApp(const MyApp());
 }
 
-String getFullName(String firstName, String lastName) {
-  return '$firstName $lastName';
+void test() {
+  final name = 'foo';
+
+  if (name == 'foo') {
+    print('yes this is foo');
+  }
 }
 
 class MyApp extends StatelessWidget {
@@ -14,7 +18,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    print(getFullName('john', 'doe'));
+    test();
+
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(

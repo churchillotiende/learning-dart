@@ -5,11 +5,15 @@ void main() {
 }
 
 void test() {
-  final name = 'foo';
+  // final name = 'foo';
 
-  if (name == 'foo') {
-    print('yes this is foo');
-  }
+  // if (name == 'foo') {
+  //   print('yes this is foo');
+  // }
+  final age = 20;
+  final halfAge = age / 2;
+
+  print('half age is: $halfAge');
 }
 
 class MyApp extends StatelessWidget {

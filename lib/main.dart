@@ -12,8 +12,16 @@ void test() {
   // }
   final age = 20;
   final halfAge = age / 2;
-
   print('half age is: $halfAge');
+
+  final name = "Test name";
+
+  if (name == "Test name") {
+    print("it is test name");
+  }
+
+  final names = ["foo", "bar", "baz"];
+  print(names[0]);
 }
 
 class MyApp extends StatelessWidget {
@@ -27,7 +35,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        // This is the theme of your application.
+        // This is the theme of your application.1
         //
         // TRY THIS: Try running your application with "flutter run". You'll see
         // the application has a purple toolbar. Then, without quitting the app,

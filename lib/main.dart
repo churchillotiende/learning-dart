@@ -10,18 +10,25 @@ void test() {
   // if (name == 'foo') {
   //   print('yes this is foo');
   // }
-  final age = 20;
-  final halfAge = age / 2;
-  print('half age is: $halfAge');
+  // final age = 20;
+  // final halfAge = age / 2;
+  // print('half age is: $halfAge');
 
-  final name = "Test name";
+  // final name = "Test name";
 
-  if (name == "Test name") {
-    print("it is test name");
-  }
+  // if (name == "Test name") {
+  //   print("it is test name");
+  // }
 
-  final names = ["foo", "bar", "baz"];
-  print(names[0]);
+  // final names = ["foo", "bar", "baz"];
+  // print(names[0]);
+
+  // Making any type nullable
+  String? name = null;
+  name = "foo";
+  print(name);
+  name = null;
+  print(name);
 }
 
 class MyApp extends StatelessWidget {

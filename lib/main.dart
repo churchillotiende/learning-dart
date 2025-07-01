@@ -29,6 +29,10 @@ void test() {
   print(name);
   name = null;
   print(name);
+
+  // Optional list of optional strings
+  List<String?>? names = ["foo", "bar", "booz", null];
+  print(names);
 }
 
 class MyApp extends StatelessWidget {

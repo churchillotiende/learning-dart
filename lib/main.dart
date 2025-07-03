@@ -35,12 +35,23 @@ void test() {
   print(names);
 }
 
+void nonNullAwareAssignmentOperator() {
+  String? firstName = null;
+  String? middlename = null;
+  String? lastName = "First non null value";
+
+  final firstNonNullValue = firstName ?? middlename ?? lastName;
+
+  print(firstNonNullValue);
+}
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    nonNullAwareAssignmentOperator();
     test();
 
     return MaterialApp(

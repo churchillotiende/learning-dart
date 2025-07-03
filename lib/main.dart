@@ -62,12 +62,15 @@ void conditionalInvocation() {
   print(length);
 }
 
+enum PersonalProperties { firstName, lastName, age }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    print(PersonalProperties.firstName.name);
     conditionalInvocation();
     nullAwareAssignmentOperator();
     nonNullAwareAssignmentOperator();

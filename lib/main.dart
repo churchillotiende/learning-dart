@@ -94,6 +94,12 @@ class Person {
   }
 }
 
+class PersonConstructor {
+  final String? name;
+
+  PersonConstructor(this.name);
+}
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -110,6 +116,9 @@ class MyApp extends StatelessWidget {
     // person object
     final person = new Person();
     person.breath();
+
+    final nameForConstructor = PersonConstructor("Name for the constructor");
+    print(nameForConstructor.name);
 
     return MaterialApp(
       title: 'Flutter Demo',

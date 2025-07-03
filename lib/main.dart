@@ -82,7 +82,8 @@ void Animals(AnimalType animalType) {
 
 class Person extends LivingThing {}
 
-class LivingThing {
+/**An abstract class is a class that cannot be instantiated */
+abstract class LivingThing {
   void run() {
     print("Running");
   }

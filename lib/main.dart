@@ -64,12 +64,29 @@ void conditionalInvocation() {
 
 enum PersonalProperties { firstName, lastName, age }
 
+enum AnimalType { cat, dog, bunny }
+
+void Animals(AnimalType animalType) {
+  switch (animalType) {
+    case AnimalType.bunny:
+      print("Bunny");
+      return;
+    case AnimalType.cat:
+      print("Cat");
+      return;
+    case AnimalType.dog:
+      print("Dog");
+      return;
+  }
+}
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    Animals(AnimalType.bunny);
     print(PersonalProperties.firstName.name);
     conditionalInvocation();
     nullAwareAssignmentOperator();

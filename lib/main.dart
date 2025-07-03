@@ -80,7 +80,9 @@ void Animals(AnimalType animalType) {
   }
 }
 
-class Person {
+class Person extends LivingThing {}
+
+class LivingThing {
   void run() {
     print("Running");
   }

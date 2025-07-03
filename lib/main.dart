@@ -45,12 +45,24 @@ void nonNullAwareAssignmentOperator() {
   print(firstNonNullValue);
 }
 
+void nullAwareAssignmentOperator() {
+  String? firstName = null;
+  String? middlename = null;
+  String? lastName = "Picking the non null value";
+
+  String? name = firstName;
+  name ??= middlename;
+  name ??= lastName;
+  print(name);
+}
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    nullAwareAssignmentOperator();
     nonNullAwareAssignmentOperator();
     test();
 

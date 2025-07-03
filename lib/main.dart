@@ -56,12 +56,19 @@ void nullAwareAssignmentOperator() {
   print(name);
 }
 
+void conditionalInvocation() {
+  List<String?>? names = ['Baz', 'foo'];
+  final length = names?.length ?? 0;
+  print(length);
+}
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    conditionalInvocation();
     nullAwareAssignmentOperator();
     nonNullAwareAssignmentOperator();
     test();

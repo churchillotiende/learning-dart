@@ -80,6 +80,20 @@ void Animals(AnimalType animalType) {
   }
 }
 
+class Person {
+  void run() {
+    print("Running");
+  }
+
+  void breath() {
+    print("Breathing");
+  }
+
+  void sleep() {
+    print("Sleeping");
+  }
+}
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -92,6 +106,10 @@ class MyApp extends StatelessWidget {
     nullAwareAssignmentOperator();
     nonNullAwareAssignmentOperator();
     test();
+
+    // person object
+    final person = new Person();
+    person.breath();
 
     return MaterialApp(
       title: 'Flutter Demo',

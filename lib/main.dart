@@ -115,6 +115,18 @@ class PersonConstructor {
   PersonConstructor(this.name);
 }
 
+// Future.Delayed
+Future<int> heavyFutureThatMultipliesByTwo(int a) {
+  return Future.delayed(Duration(seconds: 3), () {
+    return a * 2;
+  });
+}
+
+void asyncAwaitFuture() async {
+  final result = await heavyFutureThatMultipliesByTwo(20);
+  print(result);
+}
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -133,6 +145,7 @@ class MyApp extends StatelessWidget {
     // person object
     final person = new Person();
     person.breath();
+    asyncAwaitFuture();
 
     final nameForConstructor = PersonConstructor("Name for the constructor");
     print(nameForConstructor.name);

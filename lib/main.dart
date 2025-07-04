@@ -122,6 +122,18 @@ Future<int> heavyFutureThatMultipliesByTwo(int a) {
   });
 }
 
+// Stream
+Stream<String> getName() {
+  return Stream.value('Stream value');
+}
+
+void awaitStreamValue() async {
+  await for (final value in getName()) {
+    print(value);
+  }
+  print("Stream finished updating");
+}
+
 void asyncAwaitFuture() async {
   final result = await heavyFutureThatMultipliesByTwo(20);
   print(result);
@@ -146,6 +158,7 @@ class MyApp extends StatelessWidget {
     final person = new Person();
     person.breath();
     asyncAwaitFuture();
+    awaitStreamValue();
 
     final nameForConstructor = PersonConstructor("Name for the constructor");
     print(nameForConstructor.name);

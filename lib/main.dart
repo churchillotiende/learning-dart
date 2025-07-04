@@ -68,6 +68,12 @@ class Cat {
   Cat(this.name);
 }
 
+extension Run on Cat {
+  String? run() {
+    print('the cat $name is running');
+  }
+}
+
 enum PersonalProperties { firstName, lastName, age }
 
 enum AnimalType { cat, dog, bunny }
@@ -123,6 +129,7 @@ class MyApp extends StatelessWidget {
     test();
     final meow = Cat("Fluffers");
     print(meow.name);
+    print(meow.run());
     // person object
     final person = new Person();
     person.breath();

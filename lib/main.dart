@@ -62,6 +62,12 @@ void conditionalInvocation() {
   print(length);
 }
 
+// Extensions
+class Cat {
+  final String? name;
+  Cat(this.name);
+}
+
 enum PersonalProperties { firstName, lastName, age }
 
 enum AnimalType { cat, dog, bunny }
@@ -115,7 +121,8 @@ class MyApp extends StatelessWidget {
     nullAwareAssignmentOperator();
     nonNullAwareAssignmentOperator();
     test();
-
+    final meow = Cat("Fluffers");
+    print(meow.name);
     // person object
     final person = new Person();
     person.breath();

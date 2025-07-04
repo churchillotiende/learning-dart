@@ -139,6 +139,19 @@ void asyncAwaitFuture() async {
   print(result);
 }
 
+// Iterable
+Iterable<int> getOneTwoThree() sync* {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+void IterateThroughValues() {
+  for (final value in getOneTwoThree()) {
+    print(value);
+  }
+}
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -159,6 +172,7 @@ class MyApp extends StatelessWidget {
     person.breath();
     asyncAwaitFuture();
     awaitStreamValue();
+    IterateThroughValues();
 
     final nameForConstructor = PersonConstructor("Name for the constructor");
     print(nameForConstructor.name);
